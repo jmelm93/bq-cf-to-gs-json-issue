@@ -9,7 +9,7 @@ This workflow is all based on https://cloud.google.com/bigquery/docs/samples/big
     
     2. `exported_via_cloud_function.json` - is what I'm getting (uncompressed) out of cloud function - which is just rows of objects? Not even a list?     
     
-    3. `exported_via_cloud_function.json.gz` - is also what I get out of cloud function, which decompresses to what's seen in `exported_via_cloud_function.json`, which doesn't seem right to the best of my knowledge.   
+    3. `exported_via_cloud_function.json.gz` - is also what I get out of cloud function, which throws an error when trying to decompress with `const {pako} = require('pako');` on frontend of web app
     
 ## Cloud Function Code: 
 ```
