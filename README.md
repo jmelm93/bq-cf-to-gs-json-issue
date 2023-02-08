@@ -1,6 +1,8 @@
 
 # Issues w/ BigQuery Table Data >> Compressed Json via Cloud Function
 ## Overview of Files
+The first file `exported_directly_from_bq_interface.json` is what I really need the export from the cloud function to look like after decompressing it.   
+This workflow is all based on https://cloud.google.com/bigquery/docs/samples/bigquery-extract-table-json#bigquery_extract_table_json-nodejs
     1. `exported_directly_from_bq_interface.json` - is json exported directly from BigQuery interface // is the correct format I'm looking to get to.
     2. `exported_via_cloud_function.json` - is what I'm getting (uncompressed) out of cloud function - which is just rows of objects? Not even a list? 
     3. `exported_via_cloud_function.json.gz` - is also what I get out of cloud function, which decompresses to what's seen in `exported_via_cloud_function.json`, which doesn't seem right to the best of my knowledge.
